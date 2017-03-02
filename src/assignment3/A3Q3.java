@@ -48,20 +48,26 @@ public class A3Q3 {
         new Thing(hyrule, 3, 1);
         new Thing(hyrule, 3, 4);
 
+        //new counter
         for (int i = 0;;) {
+            //when the front is clear
             while (link.frontIsClear()) {
                 if (link.canPickThing()) {
                     link.pickAllThings();
                 }
                 link.move();
+                //if link hits a wall
                 if (!link.frontIsClear()) {
+                    //repeats following code every 2nd time
                     if (i % 2 == 0) {
+                        //turns link around to the right
                         if (link.canPickThing()) {
                             link.pickAllThings();
                         }
                         link.turnRight();
                         if (link.frontIsClear()) {
                             link.move();
+                        //if link can't go farther south he goes back to start
                         } else if (!link.frontIsClear()) {
                             link.turnAround();
                             while (link.getStreet() > 1) {
@@ -73,6 +79,7 @@ public class A3Q3 {
                             }
                             break;
                         }
+                        //finishes turning around to the right
                         if (link.canPickThing()) {
                             link.pickAllThings();
                         }
@@ -80,15 +87,16 @@ public class A3Q3 {
                         link.move();
                         i++;
 
-                        //break;
-
+                        //repeats following code every 2nd time
                     } else if (i % 2 == 1) {
                         if (link.canPickThing()) {
                             link.pickAllThings();
                         }
+                        //starts turning link around to the left
                         link.turnLeft();
                         if (link.frontIsClear()) {
                             link.move();
+                            //if link can't go farther south he goes back to start
                         } else if (!link.frontIsClear()) {
                             link.turnAround();
                             while (link.getStreet() > 1) {
@@ -100,13 +108,13 @@ public class A3Q3 {
                             }
                             break;
                         }
+                        //finishes turning around to the left
                         if (link.canPickThing()) {
                             link.pickAllThings();
                         }
                         link.turnLeft();
                         link.move();
                         i++;
-                        //break;
                     }
                 }
             }

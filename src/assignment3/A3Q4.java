@@ -39,9 +39,11 @@ public class A3Q4 {
         new Wall(hyrule, 2, 1, Direction.WEST);
         new Wall(hyrule, 1, 1, Direction.WEST);
         
+        //moves to find box edge
         while (link.frontIsClear()){
             link.move();
         }
+        //scans walls to find exit
         while (!link.frontIsClear()){
             link.turnLeft();
             if (link.frontIsClear()){

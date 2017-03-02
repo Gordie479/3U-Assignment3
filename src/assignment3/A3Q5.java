@@ -36,9 +36,11 @@ public class A3Q5 {
         new Thing(hyrule, 1, 1);
         new Thing(hyrule, 1, 1);
 
+        //picks up one (thing) and moves it
         link.pickThing();
         link.move();
         link.putThing();
+        //repeats picking up the rest of the (things)
         for( int i = 0; i < 9; i++) {
             link.turnAround();
             link.move();

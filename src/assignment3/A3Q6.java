@@ -41,18 +41,22 @@ public class A3Q6 {
         new Thing(hyrule, 4, 1);
         new Thing(hyrule, 4, 1);
 
+        //goes to first pile of (things)
         link.move();
         while (link.canPickThing()) {
             link.turnLeft();
             link.pickAllThings();
+            //if there is one (thing) in the pile
             if (link.countThingsInBackpack() == 1) {
                 link.putAllThings();
+            //if there are two (things) in the pile
             } else if (link.countThingsInBackpack() == 2) {
                 link.putThing();
                 link.move();
                 link.putThing();
                 link.turnAround();
                 link.move();
+            //if there are three (things) in the pile
             } else if (link.countThingsInBackpack() == 3) {
                 link.putThing();
                 link.move();
@@ -62,6 +66,7 @@ public class A3Q6 {
                 link.turnAround();
                 link.move();
                 link.move();
+            //if there are four (things) in the pile
             } else if (link.countThingsInBackpack() == 4) {
                 link.putThing();
                 link.move();
@@ -74,6 +79,7 @@ public class A3Q6 {
                 link.move();
                 link.move();
                 link.move();
+            //if there are five (things) in the pile
             } else if (link.countThingsInBackpack() == 5) {
                 link.putThing();
                 link.move();
@@ -90,6 +96,7 @@ public class A3Q6 {
                 link.move();
                 link.move();
             }
+            //goes on to next pile
             link.turnLeft();
             link.move();
         }

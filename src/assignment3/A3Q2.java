@@ -34,6 +34,7 @@ public class A3Q2 {
         new Wall(hyrule, 1, 2, Direction.EAST);
         new Wall(hyrule, 1, 2, Direction.NORTH);
 
+        //repeats one side of the square 8 times
         for (int i = 0; i < 8; i++) {
             link.move();
             link.move();

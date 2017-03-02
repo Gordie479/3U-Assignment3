@@ -59,6 +59,7 @@ public class A3Q7 {
         new Wall(hyrule, 4, 1, Direction.WEST);
 
         for (int i = 0; i < 8; i++) {
+            //repeats three sides every second time
             if (i % 2 == 0) {
                 link.move();
                 link.move();
@@ -72,6 +73,7 @@ public class A3Q7 {
                 link.move();
                 link.move();
             }
+            //repeats last side every second time
             if (i % 2 == 1) {
                 link.turnLeft();
                 link.move();
