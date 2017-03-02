@@ -32,7 +32,8 @@ public class A3Q1 {
         //(things) go here
         new Thing(hyrule, 0, 5);
         //new Thing(hyrule, 0, 3);
-
+        
+        //continues movingn until hits wall or (thing)
         while (true) {
             link.move();
             if (!link.frontIsClear() || link.canPickThing()) {
